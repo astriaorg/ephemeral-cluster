@@ -1,8 +1,8 @@
 version: '3'
 
 services:
-  dalc0:
-    container_name: dalc0
+  bridge0:
+    container_name: bridge0
     image: "ghcr.io/celestiaorg/celestia-node:sha-f4e582e"
     environment:
       - NODE_TYPE=bridge
@@ -21,7 +21,7 @@ services:
 
     networks:
       localnet:
-        ipv4_address: 192.167.3.0
+        ipv4_address: 192.167.1.0
 
 networks:
   localnet:

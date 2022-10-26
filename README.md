@@ -22,22 +22,9 @@ chmod 0600 dalc/celestia-app/celestia-light-keys
 ```
 This is done for you if you use the provided setup scripts in `scripts/`
 
-There are 4 different options for clusters to run.
-
-
-## Minimal Celestia Cluster
-> Not currently functional
-![](min-celestia.png "Minimum Viable Celestia Cluster")
-*Minimal Celestia Cluster*
-```
-scripts/minimal-celestia.sh
-```
-
-This is the most minimal cluster possible.
-
 ## Minimal Ethermint Cluster
 
-![](min-ethermint.png "Minimum Viable Ethermint Cluster")
+<!-- ![](min-ethermint.png "Minimum Viable Ethermint Cluster") -->
 *Minimal Ethermint Cluster*
 
 To setup the docker compose cluster run
@@ -53,7 +40,6 @@ Each container in the cluster has its own static IP Address. Clusters with only 
 | Core Node | 192.167.10.0 |
 | Bridge Nodes | 192.167.1.0 |
 | Light Nodes | 192.167.2.0 |
-| DALC  | 192.167.3.0 |
 | Ethermint | 192.167.4.0 |
 
 ### Interacting with the cluster
