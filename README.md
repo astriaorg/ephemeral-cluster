@@ -45,21 +45,21 @@ Each container in the cluster has its own static IP Address. Clusters with only 
 
 ### Interacting with the cluster
 
-All containers run on the same docker compose network `docker_localnet`. The easiest way to reach a container is to run curl from a docker container within the network.
+All containers run on the same docker compose network `localnet`. The easiest way to reach a container is to run curl from a docker container within the network.
 
 A single call to `core0` retrieving the first block:
 ```
-docker run --network docker_localnet --rm curlimages/curl:7.80.0 -s "192.167.10.0:26657/block?height=1"
+docker run --network localnet --rm curlimages/curl:7.80.0 -s "192.167.10.0:26657/block?height=1"
 ```
 
 Docker compose also sets up DNS within the network so you can reference a given container by its name
 ```
-docker run --network docker_localnet --rm curlimages/curl:7.80.0 -s "core0:26657/block?height=1"
+docker run --network localnet --rm curlimages/curl:7.80.0 -s "core0:26657/block?height=1"
 ```
 
 To start an interactive session on a curl container
 ```
-docker run -it --network docker_localnet curlimages/curl:7.80.0 bash
+docker run -it --network localnet curlimages/curl:7.80.0 bash
 ```
 
 ### Deploying a Smart Contract
